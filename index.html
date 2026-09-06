@@ -624,8 +624,10 @@
           </div>
 
           <div class="form-card">
-            <form id="inquiryForm">
+            <form id="inquiryForm" action="https://formsubmit.co/7d04c7fd21f4718a07b411a7563f3205" method="POST" enctype="multipart/form-data">
               <input type="hidden" name="_subject" value="New Aexonlab inquiry">
+              <input type="hidden" name="_next" value="https://aexonlab.com/#contact">
+              <input type="hidden" name="_template" value="table">
               <input type="text" name="_honey" style="position:absolute; left:-9999px;" tabindex="-1" autocomplete="off">
               <div class="form-row two">
                 <div class="field"><label for="fName">Name</label><input id="fName" name="name" type="text" required autocomplete="name"></div>
@@ -654,7 +656,7 @@
               </div>
               <div class="form-foot">
                 <button type="submit" class="btn-primary" style="cursor:pointer; font:inherit;">Send inquiry <svg width="13" height="10" viewBox="0 0 14 10" fill="none"><path d="M9 1l4 4-4 4M1 5h12" stroke="currentColor" stroke-width="1.5"/></svg></button>
-                <span class="form-note">Sent straight to our inbox &mdash; no email app required</span>
+                <span class="form-note">Sent straight to our inbox, resume included</span>
               </div>
               <div class="form-status mono" id="formStatus" role="status" aria-live="polite"></div>
             </form>
@@ -821,37 +823,24 @@
   draw();
   window.addEventListener('resize', function(){ init(); if(reduce) draw(); });
 
-  // contact form -> sent directly, no mail client involved
+  // contact form -> real multipart POST to FormSubmit (required for the resume attachment
+  // to come through; FormSubmit's AJAX endpoint does not forward file uploads)
   var form = document.getElementById('inquiryForm');
   var status = document.getElementById('formStatus');
   if(form){
     form.addEventListener('submit', function(e){
-      e.preventDefault();
       var name = form.name.value.trim();
       var email = form.email.value.trim();
       var message = form.message.value.trim();
-      if(!name || !email || !message){ status.textContent = 'Please fill in name, email and message.'; return; }
-
-      var submitBtn = form.querySelector('button[type="submit"]');
-      submitBtn.disabled = true;
+      if(!name || !email || !message){
+        e.preventDefault();
+        status.textContent = 'Please fill in name, email and message.';
+        return;
+      }
+      form.querySelector('button[type="submit"]').disabled = true;
       status.textContent = 'Sending…';
-
-      var data = new FormData(form);
-      fetch('https://formsubmit.co/ajax/7d04c7fd21f4718a07b411a7563f3205', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: data
-      }).then(function(res){
-        if(!res.ok) throw new Error('bad response');
-        return res.json();
-      }).then(function(){
-        status.textContent = 'Sent — we\'ll be in touch soon.';
-        form.reset();
-      }).catch(function(){
-        status.textContent = 'Something went wrong. Please email contact@aexonlab.com directly.';
-      }).finally(function(){
-        submitBtn.disabled = false;
-      });
+      // form submits normally from here — the browser navigates to FormSubmit,
+      // which redirects back to _next once the email (with attachment) is sent
     });
   }
 })();
