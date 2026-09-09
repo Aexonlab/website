@@ -371,18 +371,18 @@
     <div class="horizon"></div>
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow h-eyebrow">AEXONLAB &middot; NUCLEAR THERMAL PROPULSION STARTUP</p>
+        <p class="eyebrow h-eyebrow">AEXONLAB &middot; NUCLEAR ELECTRIC PROPULSION STARTUP</p>
         <h1 class="h-title">PROPULSION BUILT FOR <span class="accent-word">DEEP ORBIT</span> SMALLSATS</h1>
-        <p class="lede h-lede">Aexonlab is an early-stage startup designing solid-core nuclear thermal engines for 100&ndash;500&nbsp;kg spacecraft &mdash; targeting roughly double the specific impulse of hydrazine, at thrust levels electric propulsion can't reach.</p>
+        <p class="lede h-lede">Aexonlab is an early-stage startup designing compact reactors that power high-efficiency electric thrusters for 100&ndash;500&nbsp;kg spacecraft &mdash; continuous thrust that doesn't fade with distance from the sun, at Isp chemical propulsion can't touch.</p>
         <div class="btnrow h-btnrow">
           <a class="btn-primary" href="#technology">Explore the engine <svg width="13" height="10" viewBox="0 0 14 10" fill="none"><path d="M9 1l4 4-4 4M1 5h12" stroke="currentColor" stroke-width="1.5"/></svg></a>
           <a class="btn-ghost" href="#performance">See the numbers</a>
         </div>
         <div class="readout h-readout">
-          <div><span class="k mono">Design Isp</span><span class="v mono"><span class="cnt" data-target="880">0</span> <small>s</small></span></div>
-          <div><span class="k mono">Thrust class</span><span class="v mono">50&ndash;400 <small>N</small></span></div>
-          <div><span class="k mono">Core temp.</span><span class="v mono"><span class="cnt" data-target="2700">0</span> <small>K</small></span></div>
-          <div><span class="k mono">Engine mass</span><span class="v mono">&lt;<span class="cnt" data-target="120">0</span> <small>kg</small></span></div>
+          <div><span class="k mono">Design Isp</span><span class="v mono"><span class="cnt" data-target="2500">0</span> <small>s</small></span></div>
+          <div><span class="k mono">Thrust class</span><span class="v mono">100&ndash;400 <small>mN</small></span></div>
+          <div><span class="k mono">Reactor power</span><span class="v mono"><span class="cnt" data-target="5">0</span> <small>kWe</small></span></div>
+          <div><span class="k mono">Engine mass</span><span class="v mono">&lt;<span class="cnt" data-target="150">0</span> <small>kg</small></span></div>
         </div>
       </div>
     </div>
@@ -397,13 +397,13 @@
         <div class="split">
           <div>
             <p class="eyebrow">REVOLUTIONIZING SMALLSAT PROPULSION</p>
-            <h2 class="panel-title">THE REACTOR IS THE ENGINE</h2>
-            <p class="body-p" style="margin-top:16px;">A chemical thruster is capped by the energy locked in its propellant's molecules. Aexonlab's engine heats liquid hydrogen with fission heat instead &mdash; reaching exhaust velocities no combustion reaction can match, through fuel channels running at 2,700&nbsp;K.</p>
+            <h2 class="panel-title">THE REACTOR IS THE POWER PLANT</h2>
+            <p class="body-p" style="margin-top:16px;">Solar-electric thrusters are capped by whatever a panel can catch from the sun. Aexonlab's reactor generates electricity directly &mdash; feeding a Hall-effect thruster with dense, continuous power that doesn't fade with distance from the sun or vanish in a shadow.</p>
           </div>
           <div class="diagram-box">
-            <svg viewBox="0 0 920 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ntpTitle ntpDesc">
-              <title id="ntpTitle">Aexonlab nuclear thermal engine schematic</title>
-              <desc id="ntpDesc">Liquid hydrogen flows from the propellant tank through a turbopump into the reactor core, heated from 20 kelvin to 2700 kelvin by fission, then expands through a converging-diverging nozzle as thrust.</desc>
+            <svg viewBox="0 0 920 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="nepTitle nepDesc">
+              <title id="nepTitle">Aexonlab nuclear electric propulsion schematic</title>
+              <desc id="nepDesc">Xenon propellant flows from its tank through a flow controller directly to a Hall-effect thruster. Separately, the reactor core heats a power conversion unit, which generates electricity routed to the thruster, while a radiator rejects waste heat to space.</desc>
               <defs>
                 <radialGradient id="coreGrad" cx="50%" cy="50%" r="55%">
                   <stop offset="0%" stop-color="var(--accent-soft)"/>
@@ -417,34 +417,66 @@
                 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
                   <path d="M0,0 L10,5 L0,10 z" fill="var(--dim)"/>
                 </marker>
+                <marker id="arrowSoft" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" fill="var(--accent-soft)"/>
+                </marker>
               </defs>
-              <line x1="30" y1="250" x2="890" y2="250" stroke="var(--line-soft)" stroke-width="1"/>
-              <rect x="30" y="120" width="90" height="90" rx="8" fill="rgba(255,255,255,0.03)" stroke="var(--cryo)" stroke-width="1.5"/>
-              <text x="75" y="170" text-anchor="middle" class="mono" font-size="11" fill="var(--cryo)">LH2</text>
-              <text x="75" y="238" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">TANK &middot; 20K</text>
-              <path class="flow" d="M120,165 H190" stroke="var(--cryo)" stroke-width="3" marker-end="url(#arrow)"/>
-              <circle cx="215" cy="165" r="26" fill="rgba(255,255,255,0.03)" stroke="var(--cryo)" stroke-width="1.5"/>
-              <text x="215" y="169" text-anchor="middle" class="mono" font-size="9" fill="var(--cryo)">PUMP</text>
-              <text x="215" y="238" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">TURBOPUMP</text>
-              <path class="flow" d="M241,165 H300" stroke="var(--cryo)" stroke-width="3" marker-end="url(#arrow)"/>
-              <rect x="300" y="100" width="150" height="130" rx="10" fill="rgba(255,255,255,0.03)" stroke="var(--accent)" stroke-width="1.5"/>
-              <g class="pulse-node"><circle cx="375" cy="165" r="46" fill="url(#coreGrad)"/></g>
-              <g stroke="var(--bg)" stroke-width="2" opacity="0.5">
-                <line x1="345" y1="130" x2="345" y2="200"/><line x1="365" y1="122" x2="365" y2="208"/>
-                <line x1="385" y1="122" x2="385" y2="208"/><line x1="405" y1="130" x2="405" y2="200"/>
+
+              <!-- radiator: waste-heat rejection -->
+              <g stroke="var(--line-soft)" stroke-width="1.5" fill="rgba(255,255,255,0.02)">
+                <rect x="494" y="10" width="14" height="42"/>
+                <rect x="516" y="10" width="14" height="42"/>
+                <rect x="538" y="10" width="14" height="42"/>
+                <rect x="560" y="10" width="14" height="42"/>
               </g>
-              <text x="375" y="238" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">REACTOR CORE &middot; 2,700K</text>
-              <path class="flow" d="M450,165 H500" stroke="var(--accent-soft)" stroke-width="3" marker-end="url(#arrow)"/>
-              <path d="M500,120 L560,150 L560,180 L500,210 Z" fill="rgba(255,255,255,0.03)" stroke="var(--accent)" stroke-width="1.5"/>
-              <path d="M560,150 L680,105 L680,225 L560,180 Z" fill="rgba(255,255,255,0.03)" stroke="var(--accent)" stroke-width="1.5"/>
-              <text x="600" y="238" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">C&ndash;D NOZZLE</text>
-              <path d="M680,105 L860,80 L860,250 L680,225 Z" fill="url(#plumeGrad)"/>
-              <path class="flow" d="M700,165 H850" stroke="var(--accent-soft)" stroke-width="2" marker-end="url(#arrow)" opacity="0.85"/>
-              <circle cx="720" cy="150" r="2.4" fill="var(--accent-soft)"><animate attributeName="cx" values="700;850;700" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0;0.9" dur="1.6s" repeatCount="indefinite"/></circle>
-              <circle cx="720" cy="180" r="2" fill="var(--accent-soft)"><animate attributeName="cx" values="700;850;700" dur="1.9s" begin="0.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0;0.8" dur="1.9s" begin="0.4s" repeatCount="indefinite"/></circle>
-              <text x="775" y="238" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">THRUST</text>
+              <g stroke="var(--faint)" stroke-width="1" opacity="0.7">
+                <path d="M501,4 L497,-4" /><path d="M523,4 L519,-4"/><path d="M545,4 L541,-4"/><path d="M567,4 L563,-4"/>
+              </g>
+              <text x="612" y="30" text-anchor="start" class="mono" font-size="9" fill="var(--faint)">RADIATOR</text>
+
+              <!-- power path: reactor -> power conversion -->
+              <rect x="330" y="52" width="130" height="98" rx="10" fill="rgba(255,255,255,0.03)" stroke="var(--accent)" stroke-width="1.5"/>
+              <g class="pulse-node"><circle cx="395" cy="101" r="34" fill="url(#coreGrad)"/></g>
+              <g stroke="var(--bg)" stroke-width="2" opacity="0.5">
+                <line x1="372" y1="76" x2="372" y2="126"/><line x1="386" y1="70" x2="386" y2="132"/>
+                <line x1="404" y1="70" x2="404" y2="132"/><line x1="418" y1="76" x2="418" y2="126"/>
+              </g>
+              <text x="395" y="168" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">REACTOR CORE &middot; 1,150K</text>
+
+              <path d="M460,90 H488" stroke="var(--accent)" stroke-width="3"/>
+              <path d="M460,112 H488" stroke="var(--accent)" stroke-width="3"/>
+              <rect x="488" y="52" width="100" height="98" rx="10" fill="rgba(255,255,255,0.03)" stroke="var(--accent)" stroke-width="1.5"/>
+              <g stroke="var(--accent-soft)" stroke-width="1.6" fill="none">
+                <circle cx="538" cy="101" r="16"/>
+                <path d="M538,85 V101 L550,109"/>
+              </g>
+              <text x="538" y="168" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">POWER CONVERSION</text>
+
+              <path d="M588,80 H630 V210 H676" stroke="var(--accent-soft)" stroke-width="1.6" stroke-dasharray="1 6" stroke-linecap="round" marker-end="url(#arrowSoft)"/>
+              <circle cx="630" cy="130" r="2.5" fill="var(--accent-soft)"/>
+              <circle cx="630" cy="170" r="2.5" fill="var(--accent-soft)"/>
+              <text x="644" y="126" text-anchor="start" class="mono" font-size="9" fill="var(--accent-soft)" transform="rotate(90 644 126)">ELECTRIC POWER</text>
+
+              <!-- propellant path: xenon tank -> flow control -> thruster -->
+              <rect x="30" y="165" width="90" height="90" rx="8" fill="rgba(255,255,255,0.03)" stroke="var(--cryo)" stroke-width="1.5"/>
+              <text x="75" y="215" text-anchor="middle" class="mono" font-size="11" fill="var(--cryo)">XE</text>
+              <text x="75" y="283" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">TANK &middot; STORED</text>
+              <path class="flow" d="M120,210 H176" stroke="var(--cryo)" stroke-width="3" marker-end="url(#arrow)"/>
+              <circle cx="201" cy="210" r="25" fill="rgba(255,255,255,0.03)" stroke="var(--cryo)" stroke-width="1.5"/>
+              <text x="201" y="214" text-anchor="middle" class="mono" font-size="9" fill="var(--cryo)">FLOW</text>
+              <text x="201" y="283" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">FLOW CONTROL</text>
+              <path class="flow" d="M226,210 H676" stroke="var(--cryo)" stroke-width="3" marker-end="url(#arrow)"/>
+
+              <!-- convergence: hall-effect thruster -->
+              <rect x="676" y="140" width="94" height="90" rx="8" fill="rgba(255,255,255,0.03)" stroke="var(--accent)" stroke-width="1.5"/>
+              <text x="723" y="283" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">HALL THRUSTER</text>
+              <path d="M770,145 L860,120 L860,250 L770,225 Z" fill="url(#plumeGrad)"/>
+              <path class="flow" d="M786,185 H850" stroke="var(--accent-soft)" stroke-width="2" marker-end="url(#arrow)" opacity="0.85"/>
+              <circle cx="800" cy="170" r="2.4" fill="var(--accent-soft)"><animate attributeName="cx" values="786;850;786" dur="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0;0.9" dur="1.6s" repeatCount="indefinite"/></circle>
+              <circle cx="800" cy="200" r="2" fill="var(--accent-soft)"><animate attributeName="cx" values="786;850;786" dur="1.9s" begin="0.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0;0.8" dur="1.9s" begin="0.4s" repeatCount="indefinite"/></circle>
+              <text x="822" y="283" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">IONIZED XENON</text>
             </svg>
-            <p class="diagram-cap">LH2 tank &rarr; turbopump &rarr; reactor fuel channels &rarr; C&ndash;D nozzle &rarr; exhaust.</p>
+            <p class="diagram-cap">Xenon tank &rarr; flow control &rarr; Hall thruster, powered separately by reactor core &rarr; power conversion &rarr; electric power &rarr; thruster.</p>
           </div>
         </div>
       </div>
@@ -457,29 +489,30 @@
       <div class="panel-card reveal">
         <div class="panel-glow" style="width:32vw; height:32vw; left:-8vw; bottom:-10vw; background:var(--cryo-dim);"></div>
         <p class="eyebrow">UNMATCHED FOR ITS CLASS</p>
-        <h2 class="panel-title" style="max-width:24ch;">CHEMICAL THRUST. NEAR-ELECTRIC EFFICIENCY.</h2>
+        <h2 class="panel-title" style="max-width:24ch;">POWER THAT DOESN'T DIM WITH DISTANCE.</h2>
         <p class="body-p" style="margin-top:16px;">Figures below are per-mission design targets for a 200&nbsp;kg-class spacecraft executing a 500&nbsp;m/s orbit-raise.</p>
         <div class="stats">
-          <div class="stat"><span class="n mono"><span class="cnt" data-target="880">0</span><span class="unit">s</span></span><span class="l">Design Isp</span></div>
-          <div class="stat"><span class="n mono">50&ndash;400<span class="unit">N</span></span><span class="l">Thrust class</span></div>
-          <div class="stat"><span class="n mono">~<span class="cnt" data-target="10">0</span><span class="unit">min</span></span><span class="l">Burn for 500 m/s</span></div>
-          <div class="stat"><span class="n mono"><span class="cnt" data-target="2700">0</span><span class="unit">K</span></span><span class="l">Core temperature</span></div>
+          <div class="stat"><span class="n mono"><span class="cnt" data-target="2500">0</span><span class="unit">s</span></span><span class="l">Design Isp</span></div>
+          <div class="stat"><span class="n mono">100&ndash;400<span class="unit">mN</span></span><span class="l">Thrust class</span></div>
+          <div class="stat"><span class="n mono"><span class="cnt" data-target="5">0</span><span class="unit">kWe</span></span><span class="l">Reactor power</span></div>
+          <div class="stat"><span class="n mono"><span class="cnt" data-target="1150">0</span><span class="unit">K</span></span><span class="l">Core temperature</span></div>
         </div>
         <div class="ispchart">
-          <div class="ispbar"><span class="lbl">HYDRAZINE</span><span class="track"><span class="fill" style="--w:14%"></span></span><span class="val mono">230 s</span></div>
-          <div class="ispbar"><span class="lbl">AEXONLAB NTP</span><span class="track"><span class="fill" style="--w:55%"></span></span><span class="val mono">880 s</span></div>
-          <div class="ispbar"><span class="lbl">HALL-EFFECT</span><span class="track"><span class="fill" style="--w:100%"></span></span><span class="val mono">1,600 s</span></div>
+          <div class="ispbar"><span class="lbl">HYDRAZINE</span><span class="track"><span class="fill" style="--w:7%"></span></span><span class="val mono">230 s</span></div>
+          <div class="ispbar"><span class="lbl">AEXONLAB NEP</span><span class="track"><span class="fill" style="--w:71%"></span></span><span class="val mono">2,500 s</span></div>
+          <div class="ispbar"><span class="lbl">ION (XENON)</span><span class="track"><span class="fill" style="--w:100%"></span></span><span class="val mono">3,500 s</span></div>
         </div>
         <div class="tablewrap">
           <table>
             <caption>500 M/S &Delta;V MANEUVER &middot; 200 KG-CLASS SPACECRAFT</caption>
-            <thead><tr><th scope="col">Metric</th><th scope="col" class="num">Hydrazine</th><th scope="col" class="num">Hall-effect</th><th scope="col" class="num hi-head">Aexonlab NTP</th></tr></thead>
+            <thead><tr><th scope="col">Metric</th><th scope="col" class="num">Hydrazine</th><th scope="col" class="num">Solar-electric</th><th scope="col" class="num hi-head">Aexonlab NEP</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Thrust</th><td class="num">5&ndash;20 N</td><td class="num">40&ndash;80 mN</td><td class="num hi">50&ndash;400 N</td></tr>
-              <tr><th scope="row">Burn time, 500 m/s</th><td class="num">&asymp; 6 min</td><td class="num">&asymp; 3&ndash;5 weeks</td><td class="num hi">&asymp; 8&ndash;12 min</td></tr>
-              <tr><th scope="row">Propellant</th><td class="num">N&#8322;H&#8324;</td><td class="num">Xenon</td><td class="num hi">LH&#8322;</td></tr>
-              <tr><th scope="row">Propellant mass</th><td class="num">&asymp; 45 kg</td><td class="num">&asymp; 6 kg</td><td class="num hi">&asymp; 12 kg</td></tr>
-              <tr><th scope="row">Engine module mass</th><td class="num">&asymp; 18 kg</td><td class="num">&asymp; 12 kg</td><td class="num hi">&asymp; 95 kg (target)</td></tr>
+              <tr><th scope="row">Thrust</th><td class="num">5&ndash;20 N</td><td class="num">40&ndash;80 mN</td><td class="num hi">100&ndash;400 mN</td></tr>
+              <tr><th scope="row">Burn time, 500 m/s</th><td class="num">&asymp; 6 min</td><td class="num">&asymp; 3&ndash;5 weeks</td><td class="num hi">&asymp; 4&ndash;6 days</td></tr>
+              <tr><th scope="row">Power source</th><td class="num">&mdash;</td><td class="num">Solar array</td><td class="num hi">Reactor, always on</td></tr>
+              <tr><th scope="row">Propellant</th><td class="num">N&#8322;H&#8324;</td><td class="num">Xenon</td><td class="num hi">Xenon</td></tr>
+              <tr><th scope="row">Propellant mass</th><td class="num">&asymp; 45 kg</td><td class="num">&asymp; 6 kg</td><td class="num hi">&asymp; 5 kg</td></tr>
+              <tr><th scope="row">Engine module mass</th><td class="num">&asymp; 18 kg</td><td class="num">&asymp; 12 kg + array</td><td class="num hi">&asymp; 130 kg (target)</td></tr>
             </tbody>
           </table>
         </div>
@@ -494,17 +527,19 @@
         <div class="panel-glow" style="width:30vw; height:30vw; right:-6vw; top:-8vw; background:var(--nebula-dim);"></div>
         <div class="split reverse">
           <div>
-            <p class="eyebrow">ENGINEERED FOR THE MANEUVER, NOT THE MONTH</p>
-            <h2 class="panel-title">RAISE ORBIT IN MINUTES, NOT WEEKS</h2>
-            <p class="body-p" style="margin-top:16px;">A conjunction warning doesn't wait for a slow electric spiral. At chemical-class thrust, Aexonlab's engine completes a 500&nbsp;m/s orbit raise in a single short burn window &mdash; then relights for the next one.</p>
+            <p class="eyebrow">ENGINEERED FOR THE SHADOW, NOT JUST THE SUNLIGHT</p>
+            <h2 class="panel-title">THRUST THAT DOESN'T DIM IN ECLIPSE</h2>
+            <p class="body-p" style="margin-top:16px;">Solar-electric propulsion goes dark every time a spacecraft passes through a planet's shadow &mdash; and loses power outright far from the sun. A reactor doesn't care where the sun is. Aexonlab's engine keeps thrusting through eclipse, at Mars, or anywhere in between.</p>
           </div>
           <div class="diagram-box">
             <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="orbitTitle orbitDesc">
-              <title id="orbitTitle">Orbit-raise maneuver diagram</title>
-              <desc id="orbitDesc">A satellite fires its engine while orbiting a planet on an elliptical path, raising from a smaller dashed orbit to a larger active orbit.</desc>
+              <title id="orbitTitle">Orbit shadow-transit diagram</title>
+              <desc id="orbitDesc">A satellite orbits a planet on an elliptical path, passing through the planet's shadow cone. Its engine flame stays lit continuously, including through the shadow, unlike a solar-powered alternative which would lose power there.</desc>
+              <path d="M128,116 L300,148 L300,152 L128,184 Z" fill="var(--bg)" opacity="0.6"/>
+              <text x="205" y="143" text-anchor="middle" class="mono" font-size="9" fill="var(--faint)">SHADOW</text>
+              <text x="205" y="200" text-anchor="middle" class="mono" font-size="8" fill="var(--faint)">SOLAR-EP &middot; NO POWER HERE</text>
               <circle cx="90" cy="150" r="38" fill="rgba(255,255,255,0.03)" stroke="var(--line-soft)" stroke-width="1.5"/>
               <text x="90" y="154" text-anchor="middle" class="mono" font-size="9" fill="var(--faint)">EARTH</text>
-              <ellipse cx="220" cy="150" rx="90" ry="46" fill="none" stroke="var(--line-soft)" stroke-width="1.2" stroke-dasharray="3 5"/>
               <path id="orbitPath" d="M330,150 A110,60 0 1,1 110,150 A110,60 0 1,1 330,150" fill="none" stroke="var(--cryo)" stroke-width="1.4" class="orbit-line" opacity="0.7"/>
               <g>
                 <circle r="5" fill="var(--text)">
@@ -514,9 +549,9 @@
                   <animateMotion dur="6s" repeatCount="indefinite" rotate="auto"><mpath href="#orbitPath"/></animateMotion>
                 </path>
               </g>
-              <text x="220" y="270" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">ORBIT RAISE &middot; 500 M/S</text>
+              <text x="220" y="270" text-anchor="middle" class="mono" font-size="10" fill="var(--faint)">AEXONLAB NEP &middot; THRUST CONTINUES THROUGH SHADOW</text>
             </svg>
-            <p class="diagram-cap">Continuous-thrust orbit raise from a low starting orbit (dashed) to mission orbit.</p>
+            <p class="diagram-cap">Sunlit or in shadow, the reactor keeps the thruster powered through the full orbit.</p>
           </div>
         </div>
       </div>
@@ -544,7 +579,7 @@
           SAFE BY DESIGN
         </p>
         <h2 class="panel-title" style="max-width:22ch;">DESIGNED AROUND THE SAFETY REVIEW</h2>
-        <p class="body-p" style="margin-top:16px;">Every legacy NTP program &mdash; NERVA, Rover, DRACO &mdash; had to answer the same question before it flew. Aexonlab designs the answer in from the first fuel-element drawing.</p>
+        <p class="body-p" style="margin-top:16px;">Every past space reactor effort &mdash; SNAP-10A, Prometheus/JIMO, Kilopower &mdash; had to answer the same question before it flew. Aexonlab designs the answer in from the first fuel-element drawing.</p>
         <ul class="plist">
           <li><div><span class="t">Sub-critical through ascent</span><span class="d">Control drums held at launch configuration keep the core at k<sub>eff</sub> &asymp; 0.95 &mdash; no self-sustaining fission reaction is possible during launch, ascent, or any credible abort scenario.</span></div></li>
           <li><div><span class="t">Nuclear &amp; launch safety review</span><span class="d">Design work targets compliance with national nuclear licensing and launch safety clearance requirements for nuclear-powered spacecraft, planned alongside hardware milestones.</span></div></li>
@@ -563,9 +598,9 @@
         <p class="eyebrow">TEST PROGRAM</p>
         <h2 class="panel-title">FROM REACTOR SIMULATION TO ORBITAL DEMO</h2>
         <div class="timeline">
-          <div class="phase active"><span class="code">PH-0</span><span class="yr">2025&ndash;26</span><h3>Reactor design &amp; simulation</h3><p>Neutronics and thermal-hydraulic modeling of the fuel-element geometry and core layout, ahead of any physical hardware.</p></div>
-          <div class="phase"><span class="code">PH-1</span><span class="yr">2026&ndash;27</span><h3>Cold-flow bench</h3><p>Pump, feed system and nozzle validated with unheated LH&#8322; on a ground test stand.</p></div>
-          <div class="phase"><span class="code">PH-2</span><span class="yr">2027&ndash;28</span><h3>Electric core simulator</h3><p>Fuel-element thermal-hydraulics tested with resistive heating, no fissile material.</p></div>
+          <div class="phase active"><span class="code">PH-0</span><span class="yr">2025&ndash;26</span><h3>Reactor design &amp; simulation</h3><p>Neutronics and thermal-hydraulic modeling of the core and power-conversion interface, ahead of any physical hardware.</p></div>
+          <div class="phase"><span class="code">PH-1</span><span class="yr">2026&ndash;27</span><h3>Thruster &amp; power testbed</h3><p>Hall-effect thruster and power-conversion hardware validated on grid power, no reactor involved.</p></div>
+          <div class="phase"><span class="code">PH-2</span><span class="yr">2027&ndash;28</span><h3>Electric core simulator</h3><p>Reactor core thermal-hydraulics tested with resistive heating in place of fission, no fissile material.</p></div>
           <div class="phase"><span class="code">PH-3</span><span class="yr">2028&ndash;29</span><h3>Critical assembly</h3><p>Low-power criticality testing planned at a licensed government test facility.</p></div>
           <div class="phase"><span class="code">PH-4</span><span class="yr">2030</span><h3>Orbital demonstration</h3><p>Targeting a first in-space firing on a rideshare-launched technology demonstrator.</p></div>
         </div>
@@ -583,8 +618,8 @@
         <p class="body-p" style="margin-top:16px;">Aexonlab is a small, early-stage team working toward our first ground test. If you want to help design a nuclear engine from a blank sheet &mdash; not maintain one that already flies &mdash; we want to hear from you. We don't have a public job board yet; write to us directly.</p>
         <div class="areas">
           <div class="area"><h3>Reactor &amp; nuclear engineering</h3><p>Core physics, fuel-element design, criticality and shielding.</p></div>
-          <div class="area"><h3>Propulsion &amp; fluid systems</h3><p>Cryogenic feed systems, turbopumps, nozzle and thermal design.</p></div>
-          <div class="area"><h3>Structures &amp; systems integration</h3><p>Vehicle interfaces, thermal management, ground test hardware.</p></div>
+          <div class="area"><h3>Electric propulsion &amp; power systems</h3><p>Hall-effect thrusters, power conversion, xenon feed systems.</p></div>
+          <div class="area"><h3>Structures &amp; systems integration</h3><p>Vehicle interfaces, radiator and thermal management, ground test hardware.</p></div>
           <div class="area"><h3>Safety &amp; regulatory affairs</h3><p>Nuclear licensing pathways and launch safety case development.</p></div>
         </div>
         <div class="join-foot">
